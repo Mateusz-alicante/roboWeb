@@ -1,6 +1,7 @@
 import { useD3 } from "../../utils/hooks/useD3";
 import React, { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
+import styles from "./Environment.module.css";
 
 import { useAtom } from "jotai";
 import { distanceAtom, lastMessageAtom } from "../../utils/atoms.js";
@@ -89,7 +90,7 @@ function BarChart({}) {
 
     // set the dimensions and margins of the graph
     const margin = { top: 0, right: 0, bottom: 0, left: 0 },
-      width = 300 - margin.left - margin.right,
+      width = 450 - margin.left - margin.right,
       height = 300 - margin.top - margin.bottom,
       innerRadius = 80,
       outerRadius = Math.min(width, height) / 2; // the outerRadius goes from the middle of the SVG area to the border
@@ -137,9 +138,8 @@ function BarChart({}) {
   }, [data]);
 
   return (
-    <div>
+    <div className={styles.container}>
       <h1>Environment</h1>
-      <p>{JSON.stringify(distance)}</p>
       <div ref={graphRef}></div>
     </div>
   );

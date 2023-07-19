@@ -25,3 +25,6 @@ a {
   text-decoration: none;
 }
 
+svg {
+  filter: invert(78%) sepia(55%) saturate(4216%) hue-rotate(358deg) brightness(101%) contrast(103%);
+}
