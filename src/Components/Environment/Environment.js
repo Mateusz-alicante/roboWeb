@@ -141,6 +141,7 @@ function BarChart({}) {
     <div className={styles.container}>
       <h1>Environment</h1>
       <div ref={graphRef}></div>
+      <p className={styles.name}>Mateusz Kazimierczak</p>
     </div>
   );
 }
